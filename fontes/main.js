@@ -8,7 +8,10 @@ const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
 //----------------------
 const atividades = [], notas = [];
 //exibe mensagem pop-up p/ entrar nota media minima p/ passar
-const notaMinima = parseFloat(prompt('Digite a nota mínima:'))
+let notaMinima = parseFloat(prompt('Digite a nota mínima:', '1'));
+//validacao p/ caso nao seja inserido um numero
+if (Number.isNaN(notaMinima)) notaMinima = 7;
+console.log('Nota minima: ' + notaMinima);
 // variaveis
 let linhas = '';
 
@@ -35,9 +38,10 @@ function adicionaLinha() {
         linha += '</tr>';
         // passa linha recem criada p/ variavel global
         linhas += linha;
+        //exibicao debug
+        console.log(atividades, notas);
+        console.log(`Atividade ${inputNomeAtividade.value} - nota ${inputNotaAtividade.value}`);
     }
-     //exibicao debug
-     console.log(`Atividade ${inputNomeAtividade.value} - nota ${inputNotaAtividade.value}`);
     //reseta campos insercao
     inputNomeAtividade.value = '';
     inputNotaAtividade.value = '';
@@ -59,13 +63,13 @@ function calculaMediaFinal(){
         somaDasNotas += notas[i];
     }
     //def retorno : calculo das medias
+    console.log('Media: ' + somaDasNotas / notas.length0);
     return somaDasNotas / notas.length;
 }
 
 function atualizaTabela(){
     //constante corpo da tabela
     const corpoTabela = document.querySelector('tbody');
-   
     // injeta html na tabela
     corpoTabela.innerHTML = linhas;
 }
