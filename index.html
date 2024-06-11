@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
+    <title>Calculadora de médias</title>
+    <!--fontes personalizadas-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!--arquivo estilizacao css-->
+    <link rel="stylesheet" href="/estilos/main.css">
 </head>
 <body>
-    
+    <div class="container">
+        <!--cabecalho principal-->
+        <header>
+            <img src="/imagens/logo.png" alt="Capelo e diploma">
+            <h1>Calculadora de médias</h1>
+        </header>
+        <!--formulario p/ entrar com novos dados-->
+        <form action="" id="form-atividade">
+            <!--2 entradas: atividade + nota-->
+            <input type="text" required placeholder="Nome da atividade" id="nome-atividade">
+            <input type="number" required placeholder="Nota da atividade" min="0" max="10" id="nota-atividade">
+            <!--botoao adicao-->
+            <button type="submit">Adicionar +</button>
+        </form>
+        <!--cria uma tabela-->
+        <table cellspacing="0">
+            <!--cabecalho da tabela-->
+            <thead>
+                <!--primeira linha do cabecalho com 3 colunas: atividade, nota, status-->
+                <tr>
+                    <th>Nome da atividade</th>
+                    <th>Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--corpo com os dados da tabela
+                <tr>
+                    <td>Atividade 1</td>
+                    <td>7</td>
+                    <td><img src="/imagens/aprovado.png" alt="Emoji festejando"></td>
+                </tr>-->
+            </tbody>
+            <!--rodape com a media final da notas + status final-->
+            <tfoot>
+                <tr>
+                    <td>Média final</td>
+                    <td id="media-final-valor"></td>
+                    <td id="media-final-resultado"></td><!--<span class="resultado aprovado" id="media-final-resultado">Aprovado</span>-->
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="/fontes/main.js"></script>
 </body>
 </html>
