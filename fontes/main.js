@@ -1,8 +1,8 @@
 //constantes
 const form = document.getElementById('form-atividade');
 //== objetos p/ manipular as imagens
-const imgAprovado = '<img src="/imagens/aprovado.png" alt="Emoji celebrando" />';
-const imgReprovado = '<img src="/imagens/reprovado.png" alt="Emoji decepcionado" />';
+const imgAprovado = '<img src="./imagens/aprovado.png" alt="Emoji celebrando" />';
+const imgReprovado = '<img src="./imagens/reprovado.png" alt="Emoji decepcionado" />';
 const spanAprovado = '<span class="resultado aprovado">Aprovado</span>';
 const spanReprovado = '<span class="resultado reprovado">Reprovado</span>';
 //----------------------
